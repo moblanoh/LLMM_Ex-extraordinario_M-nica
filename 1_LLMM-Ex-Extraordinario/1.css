@@ -1,0 +1,42 @@
+.grid {
+  width: 720px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 1px 1px;
+}
+#elemento {
+  border-bottom: 3px;
+  color: black;
+}
+
+.elemento:nth-last-child(1) {
+  background-color: blue;
+  grid-area: 1 / 4 / 2 / 5;
+  transform: skew(50px);
+  animation: example 2.5s linear infinite;
+}
+
+.elemento:nth-last-child(2) {
+  background-color: brown;
+  grid-area: 2 / 3 / 3 / 4;
+  rotate: (45s);
+  animation: example 45s rotate infinite;
+}
+
+.elemento:nth-last-child(3) {
+  background-color: blueviolet;
+  grid-area: 2 / 1 / 4 / 2;
+  transform: perspective(120%);
+  animation: example 2.5s linear infinite;
+}
+
+@keyframes example {
+  0% {
+    border-color: yellow;
+  }
+  100% {
+    border-color: violet;
+  }
+}
